@@ -22,5 +22,6 @@ Vue.http.interceptors.push((request, next) => {
 
 export default {
   AuthResource: Vue.resource(API_ROOT + '/users/token'),
-  SummaryResource: Vue.resource(API_ROOT + '/summaries')
+  SummaryResource: Vue.resource(API_ROOT + '/summaries'),
+  DocumentResource: Vue.resource(API_ROOT + '/documents{/group}{/path}')
 }
