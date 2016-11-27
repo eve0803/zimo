@@ -1,15 +1,21 @@
 <template>
-  <el-form :model="formLogin" label-position="left" label-width="80px">
-    <el-form-item label="邮箱">
-      <el-input v-model="formLogin.email"></el-input>
-    </el-form-item>
-    <el-form-item label="密码">
-      <el-input v-model="formLogin.password"></el-input>
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="handleLogin(formLogin)">登录</el-button>
-    </el-form-item>
-  </el-form>
+  <el-row>
+    <el-col :span="8" :offset="8">
+      <div class="grid-content bg-purple-light">
+        <el-form :model="formLogin" label-position="left" label-width="80px">
+          <el-form-item label="邮箱">
+            <el-input v-model="formLogin.email"></el-input>
+          </el-form-item>
+          <el-form-item label="密码">
+            <el-input type="password" v-model="formLogin.password"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="handleLogin(formLogin)">登录</el-button>
+          </el-form-item>
+        </el-form>
+      </div>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
